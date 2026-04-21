@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Terms of Service - ShopHub</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ========== CSS RESET & VARIABLES ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary-color: #475569;
+            --accent-color: #f59e0b;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
+            --bg-dark: #0f172a;
+            --white: #ffffff;
+            --border-color: #e2e8f0;
+            --success: #10b981;
+            --danger: #ef4444;
+            
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+            
+            --container-width: 1000px;
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--white);
+            overflow-x: hidden;
+        }
+
+        /* ========== UTILITY CLASSES ========== */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 60px 0;
+        }
+
+        .bg-light {
+            background: var(--bg-light);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text-dark);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        /* ========== ANNOUNCEMENT BAR ========== */
+        .announcement-bar {
+            background: var(--text-dark);
+            color: var(--white);
+            text-align: center;
+            padding: 8px 0;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        /* ========== HEADER ========== */
+        .header {
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            text-decoration: none;
+            color: var(--text-dark);
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        .navbar .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: var(--transition);
+            font-size: 15px;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+
+        .header-icons {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .header-icons a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 20px;
+            position: relative;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--primary-color);
+            color: var(--white);
+            font-size: 11px;
+            font-weight: 600;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            max-width: 320px;
+            height: 100vh;
+            background: var(--white);
+            z-index: 1001;
+            transition: left 0.3s ease;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .mobile-menu.active {
+            left: 0;
+        }
+
+        .mobile-menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .mobile-menu-header i {
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+        }
+
+        .mobile-menu ul li {
+            margin-bottom: 20px;
+        }
+
+        .mobile-menu ul a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            display: none;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        /* ========== BREADCRUMB ========== */
+        .breadcrumb {
+            background: var(--bg-light);
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .breadcrumb-list {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .breadcrumb-list li {
+            display: flex;
+            align-items: center;
+            color: var(--text-light);
+            font-size: 13px;
+        }
+
+        .breadcrumb-list li:not(:last-child)::after {
+            content: '/';
+            margin-left: 8px;
+            color: var(--border-color);
+        }
+
+        .breadcrumb-list a {
+            color: var(--text-dark);
+            text-decoration: none;
+        }
+
+        .breadcrumb-list .active {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        /* ========== PAGE HERO ========== */
+        .page-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .page-hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .last-updated {
+            margin-top: 20px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        /* ========== TABLE OF CONTENTS ========== */
+        .toc {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin: 40px 0;
+        }
+
+        .toc h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .toc h3 i {
+            color: var(--primary-color);
+        }
+
+        .toc-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px 30px;
+            list-style: none;
+        }
+
+        .toc-list a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: var(--transition);
+            display: block;
+            padding: 5px 0;
+        }
+
+        .toc-list a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+        /* ========== POLICY CONTENT ========== */
+        .policy-content {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+        .policy-section {
+            margin-bottom: 40px;
+            scroll-margin-top: 100px;
+        }
+
+        .policy-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .policy-section h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .policy-section h2 i {
+            color: var(--primary-color);
+        }
+
+        .policy-section h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 25px 0 15px;
+            color: var(--text-dark);
+        }
+
+        .policy-section p {
+            color: var(--text-light);
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .policy-section ul, .policy-section ol {
+            margin-left: 20px;
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+
+        .policy-section li {
+            margin-bottom: 10px;
+        }
+
+        .policy-section strong {
+            color: var(--text-dark);
+        }
+
+        /* Info Box */
+        .info-box {
+            background: var(--bg-light);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--primary-color);
+            margin: 20px 0;
+        }
+
+        .info-box i {
+            color: var(--primary-color);
+            margin-right: 10px;
+        }
+
+        .info-box.warning {
+            border-left-color: var(--danger);
+            background: #fef2f2;
+        }
+
+        .info-box.warning i {
+            color: var(--danger);
+        }
+
+        .info-box.success {
+            border-left-color: var(--success);
+            background: #ecfdf5;
+        }
+
+        .info-box.success i {
+            color: var(--success);
+        }
+
+        /* ========== ACCEPTANCE CTA ========== */
+        .acceptance-cta {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            padding: 50px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .acceptance-cta h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .acceptance-cta p {
+            opacity: 0.9;
+            margin-bottom: 25px;
+        }
+
+        .acceptance-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .acceptance-cta .btn-primary {
+            background: var(--white);
+            color: var(--primary-color);
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 40px 0 20px;
+            margin-top: 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h4 {
+            font-size: 16px;
+            margin-bottom: 18px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--primary-color);
+        }
+
+        .footer-col p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 18px;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-color);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-col ul a:hover {
+            color: var(--white);
+        }
+
+        .contact-info li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 12px;
+            font-size: 13px;
+        }
+
+        .contact-info i {
+            color: var(--primary-color);
+            margin-top: 3px;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            .navbar .nav-menu {
+                display: none;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            .page-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .toc-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .policy-content {
+                padding: 25px;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .policy-section h2 {
+                font-size: 1.4rem;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .acceptance-cta {
+                padding: 30px 20px;
+            }
+        }
+
+        /* Animations */
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        @keyframes slideOut {
+            from { transform: translateX(0); opacity: 1; }
+            to { transform: translateX(100%); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">Shop<span>Hub</span></a>
+            
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="category.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-icons">
+                <a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+                <div class="menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== MOBILE MENU ========== -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <span class="logo">Shop<span>Hub</span></span>
+            <i class="fas fa-times" id="closeMobileMenu"></i>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- ========== BREADCRUMB ========== -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb-list">
+                <li><a href="index.html">Home</a></li>
+                <li class="active">Terms of Service</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ========== PAGE HERO ========== -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Terms of Service</h1>
+            <p>Please read these terms carefully before using our services.</p>
+            <div class="last-updated">
+                <i class="far fa-calendar-alt"></i> Last Updated: April 14, 2026
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TABLE OF CONTENTS ========== -->
+    <section>
+        <div class="container">
+            <div class="toc">
+                <h3><i class="fas fa-list"></i> Table of Contents</h3>
+                <ul class="toc-list">
+                    <li><a href="#acceptance">1. Acceptance of Terms</a></li>
+                    <li><a href="#eligibility">2. Eligibility</a></li>
+                    <li><a href="#account">3. Account Registration</a></li>
+                    <li><a href="#orders">4. Orders & Payments</a></li>
+                    <li><a href="#pricing">5. Pricing & Availability</a></li>
+                    <li><a href="#shipping">6. Shipping & Delivery</a></li>
+                    <li><a href="#returns">7. Returns & Refunds</a></li>
+                    <li><a href="#intellectual">8. Intellectual Property</a></li>
+                    <li><a href="#user-content">9. User-Generated Content</a></li>
+                    <li><a href="#prohibited">10. Prohibited Activities</a></li>
+                    <li><a href="#disclaimers">11. Disclaimers & Limitations</a></li>
+                    <li><a href="#indemnification">12. Indemnification</a></li>
+                    <li><a href="#termination">13. Termination</a></li>
+                    <li><a href="#governing">14. Governing Law</a></li>
+                    <li><a href="#disputes">15. Dispute Resolution</a></li>
+                    <li><a href="#changes">16. Changes to Terms</a></li>
+                    <li><a href="#contact">17. Contact Information</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TERMS CONTENT ========== -->
+    <section>
+        <div class="container">
+            <div class="policy-content">
+                
+                <!-- Acceptance -->
+                <div id="acceptance" class="policy-section">
+                    <h2><i class="fas fa-check-circle"></i> 1. Acceptance of Terms</h2>
+                    <p>By accessing or using ShopHub's website, mobile application, or any related services (collectively, the "Services"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use our Services.</p>
+                    <p>These Terms constitute a legally binding agreement between you and ShopHub Private Limited ("ShopHub," "we," "our," or "us").</p>
+                    <div class="info-box">
+                        <i class="fas fa-gavel"></i>
+                        <strong>Legal Agreement:</strong> These Terms affect your legal rights and obligations. Please read them carefully.
+                    </div>
+                </div>
+                
+                <!-- Eligibility -->
+                <div id="eligibility" class="policy-section">
+                    <h2><i class="fas fa-user-check"></i> 2. Eligibility</h2>
+                    <p>To use our Services, you must:</p>
+                    <ul>
+                        <li>Be at least 18 years of age (or the legal age of majority in your jurisdiction)</li>
+                        <li>Have the legal capacity to enter into a binding contract</li>
+                        <li>Not be prohibited from using our Services under applicable laws</li>
+                    </ul>
+                    <p>If you are using the Services on behalf of a business or entity, you represent that you have authority to bind that entity to these Terms.</p>
+                </div>
+                
+                <!-- Account Registration -->
+                <div id="account" class="policy-section">
+                    <h2><i class="fas fa-user-circle"></i> 3. Account Registration</h2>
+                    
+                    <h3>3.1 Account Creation</h3>
+                    <p>To access certain features, you may need to create an account. You agree to:</p>
+                    <ul>
+                        <li>Provide accurate, current, and complete information</li>
+                        <li>Maintain and update your information promptly</li>
+                        <li>Keep your password confidential and secure</li>
+                        <li>Notify us immediately of any unauthorized account use</li>
+                    </ul>
+                    
+                    <h3>3.2 Account Responsibility</h3>
+                    <p>You are solely responsible for all activities that occur under your account. We reserve the right to suspend or terminate accounts that violate these Terms.</p>
+                    
+                    <div class="info-box warning">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <strong>Security Notice:</strong> ShopHub will never ask for your password via email or phone. Report suspicious activity immediately.
+                    </div>
+                </div>
+                
+                <!-- Orders & Payments -->
+                <div id="orders" class="policy-section">
+                    <h2><i class="fas fa-shopping-cart"></i> 4. Orders & Payments</h2>
+                    
+                    <h3>4.1 Order Acceptance</h3>
+                    <p>All orders are subject to acceptance and availability. We reserve the right to refuse or cancel any order for reasons including:</p>
+                    <ul>
+                        <li>Product unavailability</li>
+                        <li>Pricing or description errors</li>
+                        <li>Suspected fraudulent activity</li>
+                        <li>Violation of these Terms</li>
+                    </ul>
+                    
+                    <h3>4.2 Payment Terms</h3>
+                    <p>By providing payment information, you represent that:</p>
+                    <ul>
+                        <li>You are authorized to use the payment method</li>
+                        <li>You authorize us to charge the full amount (including taxes and shipping)</li>
+                        <li>All payment information is accurate and complete</li>
+                    </ul>
+                    
+                    <h3>4.3 Order Confirmation</h3>
+                    <p>An order confirmation email does not constitute acceptance of your order. It confirms we have received your order. Acceptance occurs when we ship the products.</p>
+                </div>
+                
+                <!-- Pricing & Availability -->
+                <div id="pricing" class="policy-section">
+                    <h2><i class="fas fa-tag"></i> 5. Pricing & Availability</h2>
+                    <p>All prices are listed in Indian Rupees (₹) and include applicable taxes unless stated otherwise.</p>
+                    
+                    <h3>5.1 Price Changes</h3>
+                    <p>We reserve the right to change prices at any time without notice. Price changes will not affect confirmed orders.</p>
+                    
+                    <h3>5.2 Pricing Errors</h3>
+                    <p>If a product is listed at an incorrect price, we reserve the right to:</p>
+                    <ul>
+                        <li>Cancel the order and refund any payment</li>
+                        <li>Contact you for instructions before shipping</li>
+                        <li>Decline to honor the incorrect price</li>
+                    </ul>
+                </div>
+                
+                <!-- Shipping & Delivery -->
+                <div id="shipping" class="policy-section">
+                    <h2><i class="fas fa-truck"></i> 6. Shipping & Delivery</h2>
+                    <p>Shipping and delivery are governed by our Shipping Policy. Key terms include:</p>
+                    <ul>
+                        <li>Delivery timeframes are estimates only</li>
+                        <li>Risk of loss passes to you upon delivery</li>
+                        <li>We are not liable for delays beyond our control</li>
+                        <li>You must inspect products upon receipt</li>
+                    </ul>
+                    <p>For complete details, please refer to our <a href="shipping-returns.html">Shipping & Returns Policy</a>.</p>
+                </div>
+                
+                <!-- Returns & Refunds -->
+                <div id="returns" class="policy-section">
+                    <h2><i class="fas fa-undo-alt"></i> 7. Returns & Refunds</h2>
+                    <p>Returns and refunds are governed by our Return Policy. Key terms include:</p>
+                    <ul>
+                        <li>7-day return window from delivery date</li>
+                        <li>Items must be unworn with original tags</li>
+                        <li>Certain items are non-returnable (hygiene products)</li>
+                        <li>Refunds processed within 5-7 business days</li>
+                    </ul>
+                    <p>For complete details, please refer to our <a href="shipping-returns.html">Shipping & Returns Policy</a>.</p>
+                </div>
+                
+                <!-- Intellectual Property -->
+                <div id="intellectual" class="policy-section">
+                    <h2><i class="fas fa-copyright"></i> 8. Intellectual Property</h2>
+                    <p>All content on our Services, including but not limited to:</p>
+                    <ul>
+                        <li>Text, graphics, logos, and images</li>
+                        <li>Software and code</li>
+                        <li>Product descriptions and designs</li>
+                        <li>Trademarks and service marks</li>
+                    </ul>
+                    <p>is owned by ShopHub or its licensors and protected by intellectual property laws.</p>
+                    
+                    <h3>8.1 Limited License</h3>
+                    <p>We grant you a limited, non-exclusive, non-transferable license to access and use our Services for personal, non-commercial purposes.</p>
+                    
+                    <h3>8.2 Restrictions</h3>
+                    <p>You may not:</p>
+                    <ul>
+                        <li>Copy, modify, or distribute our content without permission</li>
+                        <li>Use our trademarks without written consent</li>
+                        <li>Reverse engineer or decompile our software</li>
+                        <li>Scrape or data mine our website</li>
+                    </ul>
+                </div>
+                
+                <!-- User-Generated Content -->
+                <div id="user-content" class="policy-section">
+                    <h2><i class="fas fa-comments"></i> 9. User-Generated Content</h2>
+                    <p>By submitting reviews, comments, photos, or other content ("User Content"), you:</p>
+                    <ul>
+                        <li>Grant us a worldwide, royalty-free license to use, reproduce, and display the content</li>
+                        <li>Represent that you own or have rights to the content</li>
+                        <li>Agree that content will not violate any laws or third-party rights</li>
+                    </ul>
+                    <p>We reserve the right to remove User Content at our discretion.</p>
+                </div>
+                
+                <!-- Prohibited Activities -->
+                <div id="prohibited" class="policy-section">
+                    <h2><i class="fas fa-ban"></i> 10. Prohibited Activities</h2>
+                    <p>You agree not to:</p>
+                    <ul>
+                        <li>Use the Services for illegal purposes</li>
+                        <li>Impersonate others or provide false information</li>
+                        <li>Interfere with the security or operation of our Services</li>
+                        <li>Use automated systems (bots, scrapers) without permission</li>
+                        <li>Harass, threaten, or abuse others</li>
+                        <li>Upload malicious code or viruses</li>
+                        <li>Resell products without authorization</li>
+                    </ul>
+                    <div class="info-box warning">
+                        <i class="fas fa-shield-alt"></i>
+                        <strong>Violation Consequences:</strong> We may terminate your account and pursue legal remedies for violations of this section.
+                    </div>
+                </div>
+                
+                <!-- Disclaimers & Limitations -->
+                <div id="disclaimers" class="policy-section">
+                    <h2><i class="fas fa-exclamation-circle"></i> 11. Disclaimers & Limitations of Liability</h2>
+                    
+                    <h3>11.1 Disclaimer of Warranties</h3>
+                    <p>THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO:</p>
+                    <ul>
+                        <li>MERCHANTABILITY</li>
+                        <li>FITNESS FOR A PARTICULAR PURPOSE</li>
+                        <li>NON-INFRINGEMENT</li>
+                        <li>ACCURACY OR COMPLETENESS OF CONTENT</li>
+                    </ul>
+                    
+                    <h3>11.2 Limitation of Liability</h3>
+                    <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, SHOPHUB SHALL NOT BE LIABLE FOR:</p>
+                    <ul>
+                        <li>INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES</li>
+                        <li>LOST PROFITS OR REVENUE</li>
+                        <li>DATA LOSS OR CORRUPTION</li>
+                        <li>ANY DAMAGES EXCEEDING THE AMOUNT YOU PAID FOR THE PRODUCT</li>
+                    </ul>
+                </div>
+                
+                <!-- Indemnification -->
+                <div id="indemnification" class="policy-section">
+                    <h2><i class="fas fa-hand-holding-heart"></i> 12. Indemnification</h2>
+                    <p>You agree to indemnify, defend, and hold harmless ShopHub, its officers, directors, employees, and agents from any claims, damages, losses, or expenses arising from:</p>
+                    <ul>
+                        <li>Your violation of these Terms</li>
+                        <li>Your use of the Services</li>
+                        <li>Your User Content</li>
+                        <li>Your violation of any third-party rights</li>
+                    </ul>
+                </div>
+                
+                <!-- Termination -->
+                <div id="termination" class="policy-section">
+                    <h2><i class="fas fa-door-open"></i> 13. Termination</h2>
+                    <p>We may terminate or suspend your account and access to Services at our discretion, without notice, for:</p>
+                    <ul>
+                        <li>Violation of these Terms</li>
+                        <li>Suspected fraudulent activity</li>
+                        <li>Extended inactivity</li>
+                        <li>Any other reason in our sole discretion</li>
+                    </ul>
+                    <p>Upon termination, your right to use the Services ceases immediately. Provisions that by their nature should survive termination shall survive.</p>
+                </div>
+                
+                <!-- Governing Law -->
+                <div id="governing" class="policy-section">
+                    <h2><i class="fas fa-gavel"></i> 14. Governing Law</h2>
+                    <p>These Terms shall be governed by and construed in accordance with the laws of India, without regard to conflict of law principles.</p>
+                    <p>Any dispute arising from these Terms or your use of the Services shall be subject to the exclusive jurisdiction of the courts in Mumbai, Maharashtra, India.</p>
+                </div>
+                
+                <!-- Dispute Resolution -->
+                <div id="disputes" class="policy-section">
+                    <h2><i class="fas fa-handshake"></i> 15. Dispute Resolution</h2>
+                    
+                    <h3>15.1 Informal Resolution</h3>
+                    <p>Before filing any formal legal action, you agree to contact us and attempt to resolve the dispute informally for at least 30 days.</p>
+                    
+                    <h3>15.2 Arbitration</h3>
+                    <p>Any dispute not resolved informally shall be resolved by binding arbitration in accordance with the Arbitration and Conciliation Act, 1996. The arbitration shall be conducted in Mumbai, in English, by a single arbitrator mutually agreed upon.</p>
+                    
+                    <h3>15.3 Class Action Waiver</h3>
+                    <p>You agree to resolve disputes on an individual basis and waive any right to participate in a class action or representative proceeding.</p>
+                </div>
+                
+                <!-- Changes to Terms -->
+                <div id="changes" class="policy-section">
+                    <h2><i class="fas fa-edit"></i> 16. Changes to These Terms</h2>
+                    <p>We may update these Terms periodically. We will notify you of material changes by:</p>
+                    <ul>
+                        <li>Posting the updated Terms on this page</li>
+                        <li>Sending an email notification (for significant changes)</li>
+                        <li>Displaying a notice on our website</li>
+                    </ul>
+                    <p>Your continued use of the Services after changes constitutes acceptance of the updated Terms.</p>
+                </div>
+                
+                <!-- Contact Information -->
+                <div id="contact" class="policy-section">
+                    <h2><i class="fas fa-address-card"></i> 17. Contact Information</h2>
+                    <p>For questions about these Terms of Service, please contact us:</p>
+                    
+                    <div class="info-box success">
+                        <p><i class="fas fa-building"></i> <strong>ShopHub Private Limited</strong><br>
+                        123 Fashion Street, Andheri East<br>
+                        Mumbai - 400069, Maharashtra, India</p>
+                        <p style="margin-top: 15px;"><i class="fas fa-envelope"></i> <strong>Email:</strong> legal@shophub.com</p>
+                        <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +91 98765 43210</p>
+                        <p><i class="fas fa-clock"></i> <strong>Hours:</strong> Monday - Saturday, 9:00 AM - 8:00 PM IST</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ACCEPTANCE CTA ========== -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="acceptance-cta">
+                <h3>Acceptance of Terms</h3>
+                <p>By using ShopHub, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.</p>
+                <div class="acceptance-buttons">
+                    <button class="btn btn-primary" onclick="acceptTerms()">
+                        <i class="fas fa-check"></i> I Accept
+                    </button>
+                    <a href="index.html" class="btn btn-outline" style="background: transparent; color: var(--white); border-color: var(--white);">
+                        <i class="fas fa-times"></i> Decline
+                    </a>
+                </div>
+                <p style="margin-top: 20px; font-size: 13px; opacity: 0.7;">
+                    Last accepted: <span id="lastAccepted">Never</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>About ShopHub</h4>
+                    <p>We're passionate about bringing you the latest trends in fashion with uncompromising quality and exceptional service.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=100084453753721"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/theadarshpal"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/itsadarshpal"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/itsadarshpal"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="shipping-returns.html">Shipping & Returns</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="track-order.html">Track Order</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get in Touch</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Sector, India</li>
+                        <li><i class="fas fa-phone"></i> +91 9999999999</li>
+                        <li><i class="fas fa-envelope"></i> support@shophub.com</li>
+                        <li><i class="fas fa-clock"></i> Mon - Sat: 9:00 AM - 8:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ========== CART FUNCTIONS ==========
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        
+        function updateCartCount() {
+            const countEl = document.getElementById('cartCount');
+            if (countEl) {
+                countEl.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+            }
+        }
+
+        // ========== TERMS ACCEPTANCE ==========
+        function acceptTerms() {
+            const now = new Date();
+            const dateStr = now.toLocaleDateString('en-IN', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+            
+            localStorage.setItem('termsAccepted', 'true');
+            localStorage.setItem('termsAcceptedDate', dateStr);
+            
+            document.getElementById('lastAccepted').textContent = dateStr;
+            
+            showNotification('Thank you for accepting our Terms of Service!', 'success');
+        }
+
+        function loadAcceptanceStatus() {
+            const accepted = localStorage.getItem('termsAccepted');
+            const dateStr = localStorage.getItem('termsAcceptedDate');
+            
+            if (accepted === 'true' && dateStr) {
+                document.getElementById('lastAccepted').textContent = dateStr;
+            }
+        }
+
+        // ========== NOTIFICATION ==========
+        function showNotification(msg, type = 'success') {
+            const n = document.createElement('div');
+            n.innerHTML = `<i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i><span>${msg}</span>`;
+            n.style.cssText = `position:fixed;top:80px;right:20px;background:${type==='success'?'#10b981':'#ef4444'};color:white;padding:12px 20px;border-radius:8px;display:flex;align-items:center;gap:10px;z-index:10000;animation:slideIn .3s;`;
+            document.body.appendChild(n);
+            setTimeout(() => { n.style.animation = 'slideOut .3s'; setTimeout(() => n.remove(), 300); }, 3000);
+        }
+
+        // ========== MOBILE MENU ==========
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeMobileMenu = document.getElementById('closeMobileMenu');
+        const overlay = document.getElementById('overlay');
+        
+        if (mobileMenuToggle) mobileMenuToggle.addEventListener('click', () => {
+            mobileMenu.classList.add('active'); overlay.classList.add('active'); document.body.style.overflow = 'hidden';
+        });
+        if (closeMobileMenu) closeMobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.remove('active'); overlay.classList.remove('active'); document.body.style.overflow = '';
+        });
+        if (overlay) overlay.addEventListener('click', () => {
+            mobileMenu.classList.remove('active'); overlay.classList.remove('active'); document.body.style.overflow = '';
+        });
+
+        // ========== SMOOTH SCROLL ==========
+        document.querySelectorAll('.toc-list a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // ========== INITIALIZE ==========
+        document.addEventListener('DOMContentLoaded', () => {
+            updateCartCount();
+            loadAcceptanceStatus();
+        });
+    </script>
+</body>
+</html>

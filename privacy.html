@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Privacy Policy - ShopHub</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ========== CSS RESET & VARIABLES ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary-color: #475569;
+            --accent-color: #f59e0b;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
+            --bg-dark: #0f172a;
+            --white: #ffffff;
+            --border-color: #e2e8f0;
+            --success: #10b981;
+            --danger: #ef4444;
+            
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+            
+            --container-width: 1000px;
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--white);
+            overflow-x: hidden;
+        }
+
+        /* ========== UTILITY CLASSES ========== */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 60px 0;
+        }
+
+        .bg-light {
+            background: var(--bg-light);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text-dark);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        /* ========== ANNOUNCEMENT BAR ========== */
+        .announcement-bar {
+            background: var(--text-dark);
+            color: var(--white);
+            text-align: center;
+            padding: 8px 0;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        /* ========== HEADER ========== */
+        .header {
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            text-decoration: none;
+            color: var(--text-dark);
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        .navbar .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: var(--transition);
+            font-size: 15px;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+
+        .header-icons {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .header-icons a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 20px;
+            position: relative;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--primary-color);
+            color: var(--white);
+            font-size: 11px;
+            font-weight: 600;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            max-width: 320px;
+            height: 100vh;
+            background: var(--white);
+            z-index: 1001;
+            transition: left 0.3s ease;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .mobile-menu.active {
+            left: 0;
+        }
+
+        .mobile-menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .mobile-menu-header i {
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+        }
+
+        .mobile-menu ul li {
+            margin-bottom: 20px;
+        }
+
+        .mobile-menu ul a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            display: none;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        /* ========== BREADCRUMB ========== */
+        .breadcrumb {
+            background: var(--bg-light);
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .breadcrumb-list {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .breadcrumb-list li {
+            display: flex;
+            align-items: center;
+            color: var(--text-light);
+            font-size: 13px;
+        }
+
+        .breadcrumb-list li:not(:last-child)::after {
+            content: '/';
+            margin-left: 8px;
+            color: var(--border-color);
+        }
+
+        .breadcrumb-list a {
+            color: var(--text-dark);
+            text-decoration: none;
+        }
+
+        .breadcrumb-list .active {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        /* ========== PAGE HERO ========== */
+        .page-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .page-hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .last-updated {
+            margin-top: 20px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        /* ========== TABLE OF CONTENTS ========== */
+        .toc {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin: 40px 0;
+        }
+
+        .toc h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .toc h3 i {
+            color: var(--primary-color);
+        }
+
+        .toc-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px 30px;
+            list-style: none;
+        }
+
+        .toc-list a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: var(--transition);
+            display: block;
+            padding: 5px 0;
+        }
+
+        .toc-list a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+        /* ========== POLICY CONTENT ========== */
+        .policy-content {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+        .policy-section {
+            margin-bottom: 40px;
+            scroll-margin-top: 100px;
+        }
+
+        .policy-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .policy-section h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .policy-section h2 i {
+            color: var(--primary-color);
+        }
+
+        .policy-section h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 25px 0 15px;
+            color: var(--text-dark);
+        }
+
+        .policy-section p {
+            color: var(--text-light);
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .policy-section ul, .policy-section ol {
+            margin-left: 20px;
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+
+        .policy-section li {
+            margin-bottom: 10px;
+        }
+
+        .policy-section strong {
+            color: var(--text-dark);
+        }
+
+        /* Info Box */
+        .info-box {
+            background: var(--bg-light);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--primary-color);
+            margin: 20px 0;
+        }
+
+        .info-box i {
+            color: var(--primary-color);
+            margin-right: 10px;
+        }
+
+        .info-box.warning {
+            border-left-color: var(--accent-color);
+            background: #fffbeb;
+        }
+
+        .info-box.warning i {
+            color: var(--accent-color);
+        }
+
+        /* Data Table */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .data-table th {
+            background: var(--bg-light);
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .data-table td {
+            color: var(--text-light);
+        }
+
+        /* ========== CONTACT CTA ========== */
+        .contact-cta {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            padding: 50px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .contact-cta h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-cta p {
+            opacity: 0.9;
+            margin-bottom: 25px;
+        }
+
+        .contact-cta .btn-primary {
+            background: var(--white);
+            color: var(--primary-color);
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 40px 0 20px;
+            margin-top: 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h4 {
+            font-size: 16px;
+            margin-bottom: 18px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--primary-color);
+        }
+
+        .footer-col p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 18px;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-color);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-col ul a:hover {
+            color: var(--white);
+        }
+
+        .contact-info li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 12px;
+            font-size: 13px;
+        }
+
+        .contact-info i {
+            color: var(--primary-color);
+            margin-top: 3px;
+        }
+
+        /* ========== COOKIE CONSENT BANNER ========== */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            box-shadow: var(--shadow-lg);
+            padding: 20px;
+            z-index: 999;
+            display: none;
+        }
+
+        .cookie-banner.active {
+            display: block;
+        }
+
+        .cookie-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .cookie-content p {
+            color: var(--text-light);
+            flex: 1;
+        }
+
+        .cookie-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            .navbar .nav-menu {
+                display: none;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            .page-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .toc-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .policy-content {
+                padding: 25px;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .cookie-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .policy-section h2 {
+                font-size: 1.4rem;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .contact-cta {
+                padding: 30px 20px;
+            }
+        }
+
+        /* Animations */
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        @keyframes slideOut {
+            from { transform: translateX(0); opacity: 1; }
+            to { transform: translateX(100%); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">Shop<span>Hub</span></a>
+            
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="category.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-icons">
+                <a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+                <div class="menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== MOBILE MENU ========== -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <span class="logo">Shop<span>Hub</span></span>
+            <i class="fas fa-times" id="closeMobileMenu"></i>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- ========== BREADCRUMB ========== -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb-list">
+                <li><a href="index.html">Home</a></li>
+                <li class="active">Privacy Policy</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ========== PAGE HERO ========== -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <p>Your privacy is important to us. Learn how we collect, use, and protect your information.</p>
+            <div class="last-updated">
+                <i class="far fa-calendar-alt"></i> Last Updated: April 14, 2026
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TABLE OF CONTENTS ========== -->
+    <section>
+        <div class="container">
+            <div class="toc">
+                <h3><i class="fas fa-list"></i> Table of Contents</h3>
+                <ul class="toc-list">
+                    <li><a href="#introduction">1. Introduction</a></li>
+                    <li><a href="#information-we-collect">2. Information We Collect</a></li>
+                    <li><a href="#how-we-use">3. How We Use Your Information</a></li>
+                    <li><a href="#sharing">4. Information Sharing & Disclosure</a></li>
+                    <li><a href="#cookies">5. Cookies & Tracking Technologies</a></li>
+                    <li><a href="#data-security">6. Data Security</a></li>
+                    <li><a href="#data-retention">7. Data Retention</a></li>
+                    <li><a href="#your-rights">8. Your Rights & Choices</a></li>
+                    <li><a href="#children">9. Children's Privacy</a></li>
+                    <li><a href="#third-party">10. Third-Party Links</a></li>
+                    <li><a href="#international">11. International Data Transfers</a></li>
+                    <li><a href="#changes">12. Changes to This Policy</a></li>
+                    <li><a href="#contact">13. Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== POLICY CONTENT ========== -->
+    <section>
+        <div class="container">
+            <div class="policy-content">
+                
+                <!-- Introduction -->
+                <div id="introduction" class="policy-section">
+                    <h2><i class="fas fa-info-circle"></i> 1. Introduction</h2>
+                    <p>ShopHub ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, make a purchase, or interact with our services.</p>
+                    <p>By using our website, you consent to the data practices described in this policy. If you do not agree with this policy, please do not use our services.</p>
+                    <div class="info-box">
+                        <i class="fas fa-shield-alt"></i>
+                        <strong>Our Commitment:</strong> We will never sell your personal information to third parties for marketing purposes without your explicit consent.
+                    </div>
+                </div>
+                
+                <!-- Information We Collect -->
+                <div id="information-we-collect" class="policy-section">
+                    <h2><i class="fas fa-database"></i> 2. Information We Collect</h2>
+                    
+                    <h3>2.1 Personal Information You Provide</h3>
+                    <p>We collect information you voluntarily provide when you:</p>
+                    <ul>
+                        <li>Create an account (name, email, phone number, password)</li>
+                        <li>Place an order (shipping address, billing address, payment details)</li>
+                        <li>Contact customer support (inquiry details, communication history)</li>
+                        <li>Subscribe to newsletters (email address, preferences)</li>
+                        <li>Write product reviews (name, review content, rating)</li>
+                        <li>Participate in surveys or promotions</li>
+                    </ul>
+                    
+                    <h3>2.2 Information Automatically Collected</h3>
+                    <p>When you visit our website, we automatically collect:</p>
+                    <ul>
+                        <li>Device information (IP address, browser type, operating system)</li>
+                        <li>Usage data (pages visited, time spent, links clicked)</li>
+                        <li>Purchase history and browsing behavior</li>
+                        <li>Location data (country, city based on IP address)</li>
+                    </ul>
+                    
+                    <h3>2.3 Information from Third Parties</h3>
+                    <p>We may receive information about you from:</p>
+                    <ul>
+                        <li>Payment processors (transaction confirmation)</li>
+                        <li>Shipping partners (delivery status updates)</li>
+                        <li>Social media platforms (if you connect your account)</li>
+                        <li>Marketing partners (lead generation)</li>
+                    </ul>
+                </div>
+                
+                <!-- How We Use Your Information -->
+                <div id="how-we-use" class="policy-section">
+                    <h2><i class="fas fa-cogs"></i> 3. How We Use Your Information</h2>
+                    <p>We use your information for the following purposes:</p>
+                    
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Purpose</th>
+                                <th>Legal Basis</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Process and fulfill orders</td>
+                                <td>Contractual necessity</td>
+                            </tr>
+                            <tr>
+                                <td>Communicate about orders and support</td>
+                                <td>Contractual necessity</td>
+                            </tr>
+                            <tr>
+                                <td>Send marketing communications</td>
+                                <td>Consent / Legitimate interest</td>
+                            </tr>
+                            <tr>
+                                <td>Improve website and services</td>
+                                <td>Legitimate interest</td>
+                            </tr>
+                            <tr>
+                                <td>Prevent fraud and ensure security</td>
+                                <td>Legitimate interest</td>
+                            </tr>
+                            <tr>
+                                <td>Comply with legal obligations</td>
+                                <td>Legal obligation</td>
+                            </tr>
+                            <tr>
+                                <td>Personalize shopping experience</td>
+                                <td>Legitimate interest</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Information Sharing -->
+                <div id="sharing" class="policy-section">
+                    <h2><i class="fas fa-share-alt"></i> 4. Information Sharing & Disclosure</h2>
+                    <p>We may share your information with:</p>
+                    
+                    <h3>4.1 Service Providers</h3>
+                    <p>We share information with trusted third-party service providers who assist us in:</p>
+                    <ul>
+                        <li>Payment processing (Razorpay, PayPal)</li>
+                        <li>Shipping and logistics (Delhivery, Blue Dart)</li>
+                        <li>Email marketing (Mailchimp)</li>
+                        <li>Customer support platforms</li>
+                        <li>Analytics and tracking (Google Analytics)</li>
+                    </ul>
+                    
+                    <h3>4.2 Legal Requirements</h3>
+                    <p>We may disclose information if required by law, court order, or government regulation.</p>
+                    
+                    <h3>4.3 Business Transfers</h3>
+                    <p>In the event of a merger, acquisition, or sale of assets, your information may be transferred as part of the transaction.</p>
+                    
+                    <div class="info-box warning">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <strong>Important:</strong> We do not sell, rent, or trade your personal information to third parties for their marketing purposes.
+                    </div>
+                </div>
+                
+                <!-- Cookies -->
+                <div id="cookies" class="policy-section">
+                    <h2><i class="fas fa-cookie-bite"></i> 5. Cookies & Tracking Technologies</h2>
+                    <p>We use cookies and similar technologies to enhance your browsing experience.</p>
+                    
+                    <h3>5.1 Types of Cookies We Use</h3>
+                    <ul>
+                        <li><strong>Essential Cookies:</strong> Required for website functionality (cart, checkout, login)</li>
+                        <li><strong>Performance Cookies:</strong> Analyze how visitors use our site (Google Analytics)</li>
+                        <li><strong>Functional Cookies:</strong> Remember your preferences and settings</li>
+                        <li><strong>Marketing Cookies:</strong> Track browsing for personalized advertising</li>
+                    </ul>
+                    
+                    <h3>5.2 Managing Cookies</h3>
+                    <p>You can control cookies through your browser settings. However, disabling essential cookies may affect website functionality.</p>
+                </div>
+                
+                <!-- Data Security -->
+                <div id="data-security" class="policy-section">
+                    <h2><i class="fas fa-lock"></i> 6. Data Security</h2>
+                    <p>We implement appropriate technical and organizational measures to protect your information:</p>
+                    <ul>
+                        <li>SSL/TLS encryption for data transmission</li>
+                        <li>Secure servers with firewall protection</li>
+                        <li>Regular security audits and vulnerability scans</li>
+                        <li>Access controls and authentication protocols</li>
+                        <li>Employee training on data protection</li>
+                    </ul>
+                    <p>Payment information is processed through PCI-DSS compliant payment gateways. We do not store full credit card details on our servers.</p>
+                    <div class="info-box">
+                        <i class="fas fa-shield-virus"></i>
+                        <strong>Security Tip:</strong> Never share your account password with anyone. We will never ask for your password via email or phone.
+                    </div>
+                </div>
+                
+                <!-- Data Retention -->
+                <div id="data-retention" class="policy-section">
+                    <h2><i class="fas fa-clock"></i> 7. Data Retention</h2>
+                    <p>We retain your information for as long as necessary to:</p>
+                    <ul>
+                        <li>Fulfill the purposes outlined in this policy</li>
+                        <li>Comply with legal obligations (tax records - 7 years)</li>
+                        <li>Resolve disputes and enforce agreements</li>
+                        <li>Maintain business records</li>
+                    </ul>
+                    <p>When information is no longer needed, we securely delete or anonymize it.</p>
+                </div>
+                
+                <!-- Your Rights -->
+                <div id="your-rights" class="policy-section">
+                    <h2><i class="fas fa-user-check"></i> 8. Your Rights & Choices</h2>
+                    <p>Depending on your location, you may have the following rights:</p>
+                    <ul>
+                        <li><strong>Access:</strong> Request a copy of your personal data</li>
+                        <li><strong>Rectification:</strong> Correct inaccurate or incomplete data</li>
+                        <li><strong>Erasure:</strong> Request deletion of your data ("Right to be Forgotten")</li>
+                        <li><strong>Restriction:</strong> Limit how we process your data</li>
+                        <li><strong>Portability:</strong> Receive your data in a structured format</li>
+                        <li><strong>Objection:</strong> Object to processing based on legitimate interests</li>
+                        <li><strong>Withdraw Consent:</strong> Withdraw consent at any time</li>
+                    </ul>
+                    
+                    <h3>8.1 Marketing Preferences</h3>
+                    <p>You can opt out of marketing emails by:</p>
+                    <ul>
+                        <li>Clicking "Unsubscribe" in any marketing email</li>
+                        <li>Updating preferences in your account settings</li>
+                        <li>Contacting customer support</li>
+                    </ul>
+                </div>
+                
+                <!-- Children's Privacy -->
+                <div id="children" class="policy-section">
+                    <h2><i class="fas fa-child"></i> 9. Children's Privacy</h2>
+                    <p>Our services are not directed to children under 13 years of age. We do not knowingly collect personal information from children under 13. If you believe we have collected information from a child under 13, please contact us immediately.</p>
+                </div>
+                
+                <!-- Third-Party Links -->
+                <div id="third-party" class="policy-section">
+                    <h2><i class="fas fa-external-link-alt"></i> 10. Third-Party Links</h2>
+                    <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of these sites. We encourage you to review their privacy policies before providing any information.</p>
+                </div>
+                
+                <!-- International Transfers -->
+                <div id="international" class="policy-section">
+                    <h2><i class="fas fa-globe"></i> 11. International Data Transfers</h2>
+                    <p>Your information may be transferred to and processed in countries other than your own. We ensure appropriate safeguards are in place for such transfers in compliance with applicable data protection laws.</p>
+                </div>
+                
+                <!-- Changes to Policy -->
+                <div id="changes" class="policy-section">
+                    <h2><i class="fas fa-edit"></i> 12. Changes to This Policy</h2>
+                    <p>We may update this Privacy Policy periodically. We will notify you of material changes by:</p>
+                    <ul>
+                        <li>Posting the updated policy on this page</li>
+                        <li>Sending an email notification (for significant changes)</li>
+                        <li>Displaying a notice on our website</li>
+                    </ul>
+                    <p>Continued use of our services after changes constitutes acceptance of the updated policy.</p>
+                </div>
+                
+                <!-- Contact -->
+                <div id="contact" class="policy-section">
+                    <h2><i class="fas fa-envelope"></i> 13. Contact Us</h2>
+                    <p>If you have questions or concerns about this Privacy Policy or our data practices, please contact us:</p>
+                    
+                    <div class="info-box">
+                        <p><i class="fas fa-user"></i> <strong>Data Protection Officer</strong><br>
+                        ShopHub Pvt. Ltd.<br>
+                        123 Fashion Street, Andheri East<br>
+                        Mumbai - 400069, India</p>
+                        <p style="margin-top: 15px;"><i class="fas fa-envelope"></i> <strong>Email:</strong> privacy@shophub.com</p>
+                        <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +91 98765 43210</p>
+                        <p style="margin-top: 15px;">We will respond to your inquiry within 30 days.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT CTA ========== -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="contact-cta">
+                <h3>Questions About Your Privacy?</h3>
+                <p>Our Data Protection Officer is here to help with any privacy-related concerns.</p>
+                <a href="contact.html" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i> Contact Privacy Team
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== COOKIE CONSENT BANNER ========== -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <p><i class="fas fa-cookie-bite"></i> We use cookies to enhance your experience. By continuing to browse, you agree to our use of cookies.</p>
+            <div class="cookie-buttons">
+                <button class="btn btn-primary" onclick="acceptCookies()">Accept All</button>
+                <button class="btn btn-outline" onclick="declineCookies()">Decline</button>
+                <a href="privacy.html#cookies" class="btn btn-outline">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>About ShopHub</h4>
+                    <p>We're passionate about bringing you the latest trends in fashion with uncompromising quality and exceptional service.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=100084453753721"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/theadarshpal"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/itsadarshpal"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/itsadarshpal"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="shipping-returns.html">Shipping & Returns</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="track-order.html">Track Order</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get in Touch</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Sector, India</li>
+                        <li><i class="fas fa-phone"></i> +91 9999999999</li>
+                        <li><i class="fas fa-envelope"></i> support@shophub.com</li>
+                        <li><i class="fas fa-clock"></i> Mon - Sat: 9:00 AM - 8:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ========== CART FUNCTIONS ==========
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        
+        function updateCartCount() {
+            const countEl = document.getElementById('cartCount');
+            if (countEl) {
+                countEl.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+            }
+        }
+
+        // ========== COOKIE CONSENT ==========
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            document.getElementById('cookieBanner').classList.remove('active');
+            showNotification('Cookie preferences saved!');
+        }
+
+        function declineCookies() {
+            localStorage.setItem('cookieConsent', 'declined');
+            document.getElementById('cookieBanner').classList.remove('active');
+            showNotification('Cookie preferences saved!', 'success');
+        }
+
+        function showCookieBanner() {
+            const consent = localStorage.getItem('cookieConsent');
+            if (!consent) {
+                document.getElementById('cookieBanner').classList.add('active');
+            }
+        }
+
+        // ========== NOTIFICATION ==========
+        function showNotification(msg, type = 'success') {
+            const n = document.createElement('div');
+            n.innerHTML = `<i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i><span>${msg}</span>`;
+            n.style.cssText = `position:fixed;top:80px;right:20px;background:${type==='success'?'#10b981':'#ef4444'};color:white;padding:12px 20px;border-radius:8px;display:flex;align-items:center;gap:10px;z-index:10000;animation:slideIn .3s;`;
+            document.body.appendChild(n);
+            setTimeout(() => { n.style.animation = 'slideOut .3s'; setTimeout(() => n.remove(), 300); }, 3000);
+        }
+
+        // ========== MOBILE MENU ==========
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeMobileMenu = document.getElementById('closeMobileMenu');
+        const overlay = document.getElementById('overlay');
+        
+        if (mobileMenuToggle) mobileMenuToggle.addEventListener('click', () => {
+            mobileMenu.classList.add('active'); overlay.classList.add('active'); document.body.style.overflow = 'hidden';
+        });
+        if (closeMobileMenu) closeMobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.remove('active'); overlay.classList.remove('active'); document.body.style.overflow = '';
+        });
+        if (overlay) overlay.addEventListener('click', () => {
+            mobileMenu.classList.remove('active'); overlay.classList.remove('active'); document.body.style.overflow = '';
+        });
+
+        // ========== SMOOTH SCROLL ==========
+        document.querySelectorAll('.toc-list a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // ========== INITIALIZE ==========
+        document.addEventListener('DOMContentLoaded', () => {
+            updateCartCount();
+            showCookieBanner();
+        });
+    </script>
+</body>
+</html>
